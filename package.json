@@ -1,17 +1,17 @@
 {
     "name": "react-paypal-checkout",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "React component that renders Paypal's check out button",
     "repository": {
         "type": "git",
-        "url": "https://github.com/sonzero/react-paypal-checkout.git"
+        "url": "https://github.com/sonzerolee/react-paypal-checkout.git"
     },
-    "author": "TestCute <testcute321@gmail.com>",
+    "author": "Sonzero <sonzero.dev@gmail.com>",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/sonzero/react-paypal-checkout/issues"
+        "url": "https://github.com/sonzerolee/react-paypal-checkout/issues"
     },
-    "homepage": "https://github.com/sonzero/react-paypal-checkout",
+    "homepage": "https://github.com/sonzerolee/react-paypal-checkout",
     "main": "dist/index.js",
     "module": "dist/index.js",
     "files": [ "dist", "README.md" ],

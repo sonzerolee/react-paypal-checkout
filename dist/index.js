@@ -192,7 +192,7 @@
 
     PaypalButton.defaultProps = {
         env: 'sandbox',
-        locale: 'ja_JP',
+        locale: 'en_US',
         // null means buyer address is returned in the payment execution response
         shipping: null,
         onSuccess: function onSuccess(payment) {
