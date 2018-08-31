@@ -187,12 +187,12 @@
         currency: _propTypes2.default.string.isRequired,
         total: _propTypes2.default.number.isRequired,
         client: _propTypes2.default.object.isRequired,
+        locale: _propTypes2.default.string,
         style: _propTypes2.default.object
     };
 
     PaypalButton.defaultProps = {
         env: 'sandbox',
-        locale: 'en_US',
         // null means buyer address is returned in the payment execution response
         shipping: null,
         onSuccess: function onSuccess(payment) {

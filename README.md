@@ -53,7 +53,7 @@ export default class MyApp extends React.Component {
 		let env = 'sandbox'; // you can set here to 'production' for production
 		let currency = 'USD'; // or you can set this value from your props or state  
 		let total = 1;  // same as above, this is the total amount (based on currency) to be 
-		let locale: 'en_US'; 
+		let locale = 'en_US'; 
 		// For Customize Style: https://developer.paypal.com/docs/checkout/how-to/customize-button/
 		let style = {
 			'label':'pay', 

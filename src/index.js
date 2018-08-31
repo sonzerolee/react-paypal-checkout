@@ -88,12 +88,12 @@ PaypalButton.propTypes = {
     currency: PropTypes.string.isRequired,
     total: PropTypes.number.isRequired,
     client: PropTypes.object.isRequired,
+    locale: PropTypes.string,
     style: PropTypes.object
 }
 
 PaypalButton.defaultProps = {
     env: 'sandbox',
-    locale: 'en_US',
     // null means buyer address is returned in the payment execution response
     shipping: null,
     onSuccess: (payment) => {
