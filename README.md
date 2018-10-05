@@ -1,10 +1,16 @@
 # react-paypal-checkout
-React component that renders Paypal's check out button
+React component that renders PayPal's check out button
 
 ## Install
 
 ```bash
 npm install --save react-paypal-checkout
+```
+
+or
+
+```bash
+yarn add react-paypal-checkout
 ```
 
 ## Usage
@@ -17,8 +23,8 @@ import PaypalBtn from 'react-paypal-checkout';
 export default class MyApp extends React.Component {
 	render() {
 		const client = {
-			sandbox:    'YOUR-SANDBOX-APP-ID',
-			production: 'YOUR-PRODUCTION-APP-ID',
+			sandbox:    'Your-Sandbox-Client-ID',
+			production: 'Your-Production-Client-ID',
 		}	
         return (
             <PaypalBtn client={client} currency={'USD'} total={1.00} />
@@ -36,25 +42,25 @@ import PaypalBtn from 'react-paypal-checkout';
 export default class MyApp extends React.Component {
 	render() {		
 		const onSuccess = (payment) => {
-			// Congratulation, it came here means everything's fine!
+			// 1, 2, and ... Poof! You made it, everything's fine and dandy!
 			console.log("The payment was succeeded!", payment);
 		}		
 
 		const onCancel = (data) => {
-			// User pressed "cancel" or close Paypal's popup!
+			// The user pressed "cancel" or closed the PayPal popup
 			console.log('The payment was cancelled!', data);
 		}	
 
 		const onError = (err) => {
-			// The main Paypal's script cannot be loaded or somethings block the loading of that script!
-			console.log("Error!", err);		
+			// The main Paypal script could not be loaded or something blocked the script from loading
+			console.log("Error!", err);
 		}			
 
-		let env = 'sandbox'; // you can set here to 'production' for production
-		let currency = 'USD'; // or you can set this value from your props or state  
-		let total = 1;  // same as above, this is the total amount (based on currency) to be 
+		let env = 'sandbox'; // you can set this string to 'production'
+		let currency = 'USD'; // or you can set this string from your props or state  
+		let total = 1;  // this is the total amount (based on currency) to charge
 		let locale = 'en_US'; 
-		// For Customize Style: https://developer.paypal.com/docs/checkout/how-to/customize-button/
+		// To style further: https://developer.paypal.com/docs/checkout/how-to/customize-button/
 		let style = {
 			'label':'pay', 
 			'tagline': false, 
@@ -64,12 +70,13 @@ export default class MyApp extends React.Component {
 		};
 
 		const client = {
-		sandbox:    'YOUR-SANDBOX-APP-ID',
-		production: 'YOUR-PRODUCTION-APP-ID',
+		sandbox:    'Your-Sandbox-Client-ID',
+		production: 'Your-Production-Client-ID',
 		}
 		// In order to get production's app-ID, you will have to send your app to Paypal for approval first
-		// For sandbox app-ID (after logging into your developer account, please locate the "REST API apps" section, click "Create App"): 
+		// For your sandbox Client-ID (after logging into your developer account, please locate the "REST API apps" section, click "Create App" unless you have already done so):
 		//   => https://developer.paypal.com/docs/classic/lifecycle/sb_credentials/
+		// Note: IGNORE the Sandbox test AppID - this is ONLY for Adaptive APIs, NOT REST APIs)
 		// For production app-ID:
 		//   => https://developer.paypal.com/docs/classic/lifecycle/goingLive/		
 
